@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 
+<!-- reusable fragment-->
 <head th:fragment="head">
 
     <!-- Bootstrap stylesheets and script -->
+    <!-- generate URLS-->
+    <!-- css links to styles, js to functions-->
     <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
     <link th:href="@{/css/techjobs.css}" rel="stylesheet" />
     <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
-
+    <!-- sets the content, Techjobs is default, changes to TechJobs: "search term?"-->
     <title th:text="'TechJobs' + ${title == null ? '' : ' :: ' + title}">TechJobs</title>
 </head>
 
 <body>
-
+<!-- reusable fragment-->
+<!-- class creates dark theme and puts it at top of page-->
 <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -29,3 +33,5 @@
 
 </body>
 </html>
+
+<!-- sets up reusable page with thmyeleaf for dynamic content, uses bootstrap for styling and function, provides nav bar on top of page with home search and list-->

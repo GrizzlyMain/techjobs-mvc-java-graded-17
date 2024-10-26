@@ -126,7 +126,10 @@ public class JobData {
 
         return jobs;
     }
+//for each loop picks items out of list and checks if they are equal to value (string entered by user?) and return the item if they are equal
 
+    //type variable name: array list being searched
+    //using static methods from JobData for controller code
     private static Object findExistingObject(ArrayList list, String value){
         for (Object item : list){
             if (item.toString().toLowerCase().equals(value.toLowerCase())){
@@ -142,6 +145,9 @@ public class JobData {
     private static void loadData() {
 
         // Only load data once
+        //if true, method returns to avoid loading data again
+        //if false, creates job objects with specified names,location, position, skill
+
         if (isDataLoaded) {
             return;
         }

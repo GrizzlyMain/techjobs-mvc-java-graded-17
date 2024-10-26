@@ -14,6 +14,8 @@ import java.util.HashMap;
 /**
  * Created by LaunchCode
  */
+
+
 @Controller
 @RequestMapping(value = "list")
 public class ListController {
@@ -33,6 +35,8 @@ public class ListController {
         tableChoices.put("positionType", JobData.getAllPositionTypes());
         tableChoices.put("coreCompetency", JobData.getAllCoreCompetency());
     }
+//displays table of clickable links for diff jab categories
+    //implements JobData
 
     @GetMapping(value = "")
     public String list(Model model) {
@@ -45,7 +49,15 @@ public class ListController {
 
         return "list";
     }
-
+//renders a diff view that displays info for the jobs that relate to a selected category
+    //implements JobData
+    //uses two query params passed in as column and value and displays jobs that match
+    //all returns most, or it retrieves smaller set based on column and value choice?
+    //controller renders list-jobs.html view
+    //searching for a particular value withing a particular field
+    //then display jobs that match
+    //different from other way of searching bc we arrive here by clicking a link within list view and do not complete a form
+    //handles all diff than clicking cat link
     @GetMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model, @RequestParam String column, @RequestParam(required = false) String value) {
         ArrayList<Job> jobs;
