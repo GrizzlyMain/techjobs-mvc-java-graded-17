@@ -13,11 +13,39 @@
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 
     <!-- Like a for each loop in Java, reviews chapter 13, iterating in a template -->
-    <ol>
-      <th:block th:each="item : ${jobs}">
-        <li th:text="${item}"></li>
-      </th:block>
-    </ol>
+
+
+    <th:block th:each="item : ${jobs}" >
+      <table class="job-listing">
+      <tbody>
+      <tr>
+        <td>ID</td>
+        <td th:text="${item.id}"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td th:text="${item.name}"></td>
+      </tr>
+      <tr>
+        <td>Employer</td>
+        <td th:text="${item.employer}"></td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td th:text="${item.location}"></td>
+      </tr>
+      <tr>
+        <td>Position Type</td>
+        <td th:text="${item.positionType}"></td>
+      </tr>
+      <tr>
+        <td>Skill</td>
+        <td th:text="${item.coreCompetency}"></td>
+      </tr>
+      </tbody>
+  </table>
+    </th:block>
+
 
 
 </div>
