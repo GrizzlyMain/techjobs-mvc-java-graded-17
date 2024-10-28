@@ -12,6 +12,14 @@
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 
+    <!-- Like a for each loop in Java, reviews chapter 13, iterating in a template -->
+    <ol>
+      <th:block th:each="item : ${jobs}">
+        <li th:text="${item}"></li>
+      </th:block>
+    </ol>
+
+
 </div>
 
 </body>

@@ -54,7 +54,7 @@ public class ListController {
     //uses two query params passed in as column and value and displays jobs that match
     //all returns most, or it retrieves smaller set based on column and value choice?
     //controller renders list-jobs.html view
-    //searching for a particular value withing a particular field
+    //searching for a particular value within a particular field
     //then display jobs that match
     //different from other way of searching bc we arrive here by clicking a link within list view and do not complete a form
     //handles all diff than clicking cat link
