@@ -17,7 +17,7 @@
   <!-- inspected demo app, referred to https://www.w3schools.com/tags/tag_tbody.asp, referred to https://education.launchcode.org/java-web-dev-curriculum/thymeleaf-views/reading/iterating-templates/index.html -->
     <th:block th:each="item : ${jobs}" >
       <table class="job-listing">
-      <tbody>
+
       <tr>
         <td>ID</td>
         <td th:text="${item.id}"></td>
@@ -42,7 +42,7 @@
         <td>Skill</td>
         <td th:text="${item.coreCompetency}"></td>
       </tr>
-      </tbody>
+
   </table>
     </th:block>
 
